@@ -32,7 +32,7 @@
           left: 10px;
           top: 10px;
           width: calc(100% - 20px);
-        } 
+        }
         div#flying {
           background-color: Black;
         }
@@ -41,7 +41,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <script
     src="https://code.jquery.com/jquery-3.6.0.slim.js"
@@ -52,9 +52,9 @@
     <div id="flying">
       <video preload="auto" muted autoplay loop id="frigata">
         <source
-          src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/frigata.webm?v=1648688992347"
+          src="glitch-assets/frigata.webm?v=1648688992347"
         />
-        <source src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/frigata.mp4?v=1648688999037" />
+        <source src="glitch-assets/frigata.mp4?v=1648688999037" />
       </video>
     </div>
     <div id="left-card">
@@ -68,7 +68,7 @@
     <script>
       $(document).ready(function () {
         setTimeout(function (){
-          $("#flying").css("cursor", "url('https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/gaivota.png?v=1648689828769'), auto")
+          $("#flying").css("cursor", "url('glitch-assets/gaivota.png?v=1648689828769'), auto")
         }, 2000);
           let hue = 0;
           setInterval(color, 800);
