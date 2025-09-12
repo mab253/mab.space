@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mab.space</title>
+    <style>
+      #left-card h1, #left-card h1 a {
+        color: White;
+      }
+      div#flying {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #444;
+        transition: 300ms all;
+      }
+      div#flying video {
+        width: auto;
+        height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      @media only screen and (max-device-width: 800px) {
+        div#left-card {
+          left: 10px;
+          top: 10px;
+          width: calc(100% - 20px);
+        } 
+        div#flying {
+          background-color: Black;
+        }
+        div#flying video {
+          display: none;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <div id="flying">
+      <video preload="auto" muted autoplay loop id="frigata">
+        <source
+          src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/frigata.webm?v=1648688992347"
+        />
+        <source src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/frigata.mp4?v=1648688999037" />
+      </video>
+    </div>
+    <div id="left-card">
+      <h1 class="title"><a href="/">mab.space</a></h1>
+      <h1 class="title">MAB is Madeline Avram Blount</h1>
+      <h1 class="links">
+        <a href="/projects.html">work</a> | <a href="/about">about</a>
+      </h1>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        setTimeout(function (){
+          $("#flying").css("cursor", "url('https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/gaivota.png?v=1648689828769'), auto")
+        }, 2000);
+          let hue = 0;
+          setInterval(color, 800);
+
+          function color() {
+            hue = hue + 10;
+            $("#flying").css("filter", "saturate(2) hue-rotate(" + hue + "deg)");
+            $("#flying").css("-webkit-filter", "saturate(2) hue-rotate(" + hue + "deg)");
+          }
+      });
+    </script>
+  </body>
+</html>

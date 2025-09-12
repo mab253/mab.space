@@ -1,0 +1,137 @@
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Quicksand:wght@300&display=swap");
+
+@font-face {
+  font-family: NationalPark;
+  font-weight: normal;
+  src: url("https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/NationalPark-Thin.otf?v=1648756811306")
+    format("opentype");
+}
+
+/* general pages */
+
+a,
+a:visited {
+  color: Black;
+}
+
+strong {
+  font-weight: 700;
+}
+
+div#left-card {
+  background-color: rgba(0, 0, 0, 0.86);
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  max-width: 333px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+#left-card h1 {
+  font-family: Inconsolata, monospace;
+  font-weight: 400;
+  font-size: 18px;
+}
+#left-card h1.links {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+#left-card h1 a {
+  text-decoration: none;
+}
+
+#meta-list a {
+  text-decoration: none;
+}
+
+#meta-list a:hover {
+  text-decoration: underline;
+}
+
+
+/* project pages */
+
+body.project {
+  background-color: White;
+  font-family: NationalPark, Quicksand, sans-serif;
+}
+
+body.project div#left-card {
+  border: 0.5px solid Black;
+  background-color: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: auto;
+}
+body.project div#left-card h1,
+body.project div#left-card h1 a {
+  color: Black;
+}
+body.project div.super-grid {
+  display: grid;
+  grid-template-columns: 400px auto;
+}
+body.project div.super-column {
+  padding: 30px;
+  max-width: 1000px;
+}
+body.project div.super-column div#meta-list {
+  padding-top: 50px;
+  padding-left: 30px;
+}
+
+body.project div.super-column img {
+  max-width: 100%;
+}
+
+body.project div.super-column img.half {
+  max-width: 49%;
+  vertical-align: top;
+}
+
+body.project h2.title {
+  font-size: 22px;
+}
+
+body.project a.link-out {
+  font-family: Inconsolata, monospace;
+  color: Black;
+  font-weight: 200;
+}
+
+body.project p {
+  font-family: NationalPark, Quicksand, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+body.project p.project-data {
+  font-family: Inconsolata, monospace;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+body.project p.caption {
+  margin-top: 5px;
+  font-family: Inconsolata, monospace;
+  font-size: 15px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 865px) {
+  div.super-grid {
+    grid-template-columns: 100% !important;
+  }
+  div#meta-list {
+    display: none;
+  }
+}

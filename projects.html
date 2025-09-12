@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- o hello! -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>👽 hello world</title>
+    <meta name="description" content="mab is madeline avram blount" />
+    <meta property="og:description" content="mab web home" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    body {
+      background-color: #f4fff4;
+      font-family: NationalPark, Quicksand, sans-serif;
+    }
+    div#left-card {
+      border: 0.5px solid Black;
+      background-color: transparent;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+    }
+    #left-card h1,
+    #left-card h1 a {
+      color: Black;
+    }
+    div.super-grid {
+      display: grid;
+      grid-template-columns: 400px auto;
+    }
+    div.super-column {
+      padding: 30px;
+    }
+    div.super-column div#meta-list {
+      padding-top: 50px;
+      padding-left: 30px;
+    }
+    div.project-grid {
+      display: grid;
+      grid-template-columns: 50% auto;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+    div.project-grid div.project {
+      width: 100%;
+      height: 50vh;
+      border: 1px solid Gray;
+      padding: 50px;
+      padding-right: 0;
+      box-sizing: border-box;
+      transition: all 800ms;
+      overflow: hidden;
+    }
+    div.project-grid div.project:hover {
+      /*border: 50px solid Lime;
+      border-top: 0;
+      border-bottom: 0;*/
+      border-radius: 50%;
+      /*clip-path: polygon(1% 1%, 75% 6%, 100% 100%, 2% 100%);*/
+    }
+    div.project-grid a:nth-child(odd) div.project:hover {
+      background-color: Lime;
+    }
+    div.project-grid a:nth-child(even) div.project:hover {
+      background-color: Magenta;
+    }
+    div.project-grid div.project div.project-img {
+      width: 100%;
+      margin-top: 80px;
+    }
+    div.project-grid div.project div.project-img img {
+      width: 100%;
+    }
+    div.project-grid div.project h2.project-title {
+      position: absolute;
+      font-size: 22px;
+      color: Black;
+    }
+    div.project-grid div.project h2.project-title.project-select {
+      background-color: Black;
+      padding: 3px;
+      color: White;
+      position: absolute;
+    }
+    @media only screen and (max-width: 1000px) {
+      div.super-grid {
+        grid-template-columns: 100%;
+      }
+      div.project-grid div.project {
+        height: 330px;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      div.project-grid {
+        grid-template-columns: 100%;
+      }
+    }
+    
+  </style>
+  <body>
+    <div class="super-grid">
+      <div class="super-column">
+        <div id="left-card">
+          <h1 class="title"><a href="/">mab.space</a></h1>
+          <h1 class="title">MAB is Madeline Avram Blount</h1>
+          <h1 class="links">
+            <a href="/projects.html">work</a> | <a href="/about">about</a>
+          </h1>
+        </div>
+        <div id="meta-list">
+          <h1>Projects ⟶ </h1>
+          <h1 style="font-size: 26px;">
+            🐡 <a href="/teaching">Teaching</a>
+          </h1>
+        </div>
+      </div> <!-- end of column -->
+      <div class="super-column">
+        <div class="project-grid">
+          <a href="/antarctica">
+          <div class="project">
+            <h2 class="project-title">
+              Antarctica
+            </h2>
+            <div class="project-img" style="filter:sepia(0.5); -webkit-filter:sepia(0.5);">
+              <img src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/01-21-25_156_DSC_9535.JPG?v=1746725869272">
+            </div>
+          </div>
+          </a>
+          <a href="/unlocknyc">
+          <div class="project">
+            <h2 class="project-title">
+              Unlock NYC
+            </h2>
+            <div class="project-img" style="filter:sepia(1); -webkit-filter:sepia(1); margin-top: 0;">
+              <img src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/unlock-grid3?v=1648761989094">
+            </div>
+          </div>
+          </a>
+          <a href="/panama">
+          <div class="project">
+            <h2 class="project-title">
+              Leafcutter Music
+            </h2>
+            <div class="project-img" style="filter:sepia(1) hue-rotate(30deg); -webkit-filter:sepia(1) hue-rotate(30deg);">
+              <img src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/ant_highway_web.jpg?v=1648768834262">
+            </div>
+          </div>
+          </a>
+          <a href="/networksbeyond">
+          <div class="project">
+            <h2 class="project-title">
+              Networks Beyond Borders
+            </h2>
+            <div class="project-img">
+              <img src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/migration-grid?v=1648771859475">
+            </div>
+          </div>
+          </a>
+          <a href="/mutual-aid">
+          <div class="project">
+            <h2 class="project-title">
+              covid-19 response
+            </h2>
+            <div class="project-img">
+              <img style="transform: rotate(-10deg);" src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/pods-grid.png?v=1648778718250">
+            </div>
+          </div>
+          </a>
+          <a href="/cyprus">
+          <div class="project">
+            <h2 class="project-title">
+              Crime Scene
+            </h2>
+            <div class="project-img">
+              <img style="filter:sepia(1) hue-rotate(30deg); -webkit-filter:sepia(1) hue-rotate(30deg)" src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/cyprus-grid.jpg?v=1648781281243">
+            </div>
+          </div>
+          </a>
+          <a href="/cartography">
+          <div class="project">
+            <h2 class="project-title">
+              Cartography
+            </h2>
+            <div class="project-img">
+              <img src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/carto-grid?v=1648848399488">
+            </div>
+          </div>
+          </a>
+          <a href="/glacier">
+          <div class="project">
+            <h2 class="project-title">
+              First Volcano, Last Glacier
+            </h2>
+            <div class="project-img">
+              <img src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/glacier1.jpg?v=1648783953241">
+            </div>
+          </div>
+          </a>
+          <a href="/web">
+          <div class="project">
+            <h2 class="project-title">
+              Web
+            </h2>
+          </div>
+          </a>
+          <a href="/occupy">
+            <div class="project">
+              <h2 class="project-title">
+                tent dance
+              </h2>
+              <div class="project-img">
+                <img src="https://cdn.glitch.global/f9f295a1-f8dc-421b-bb1f-6db4614957cf/in-tents.png?v=1664574281458">
+              </div>
+            </div>
+          </a>
+          <!--
+          <div class="project">
+            <h2 class="project-title">
+              Dancing with Droney
+            </h2>
+          </div>
+          <div class="project">
+            <h2 class="project-title">
+              Large Mammal Confessional
+            </h2>
+          </div>
+          <div class="project">
+            <h2 class="project-title">
+              Graffiti
+            </h2>
+          </div>
+          <div class="project">
+            <h2 class="project-title">
+              Photography
+            </h2>
+          </div>
+          <div class="project">
+            <h2 class="project-title">
+              In Tents
+            </h2>
+          </div>
+          <div class="project">
+            <h2 class="project-title">
+              Web Auto-archaeology
+            </h2>
+          </div>-->
+ 
+        </div>
+      </div>
+    </div> <!-- end of super-grid -->
+    <script>
+      $(document).ready(function() {
+        $("div.project").hover(function(){
+          $(this).find("h2.project-title").toggleClass("project-select");
+        });
+      });
+    </script>
+  </body>
+</html>
